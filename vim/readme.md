@@ -19,13 +19,17 @@ https://github.com/ycm-core/YouCompleteMe#python-semantic-completion
 
 Compiling YCM with semantic support for C-family languages through libclang:
 
-`cd ~/.vim/bundle/YouCompleteMe
-python3 install.py --clang-completer`
+```sh
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --clang-completer
+```
 
 Or Compiling YCM without semantic support for C-family languages:
 
-`cd ~/.vim/bundle/YouCompleteMe
-python3 install.py`
+```shell
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py
+```
 
 
 
