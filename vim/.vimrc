@@ -25,10 +25,13 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'    "Auto indentation
 Plugin 'Valloric/YouCompleteMe'          "Auto completion
 Plugin 'vim-syntastic/syntastic'         "Syntax correction
+Plugin 'vim-python/python-syntax'
 Plugin 'nvie/vim-flake8'                 "Pep8 Syntax correction
 Plugin 'scrooloose/nerdtree'             "File tree
 Plugin 'jistr/vim-nerdtree-tabs'         "Use tab for file tree
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jnurmine/Zenburn'
+
 
 
 
@@ -63,10 +66,11 @@ let python_highlight_all=1
 autocmd vimenter * NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
-" Color plugin conf
-set background=light
-let g:solarized_termcolors=256
-colorscheme solarized
+"Color plugin conf
+"set background=light
+"let g:solarized_termcolors=256
+"colorscheme solarized
+colorscheme zenburn
 
 
 set number
