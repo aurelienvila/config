@@ -28,6 +28,8 @@ Plugin 'vim-syntastic/syntastic'         "Syntax correction
 Plugin 'nvie/vim-flake8'                 "Pep8 Syntax correction
 Plugin 'scrooloose/nerdtree'             "File tree
 Plugin 'jistr/vim-nerdtree-tabs'         "Use tab for file tree
+Plugin 'altercation/vim-colors-solarized'
+
 
 
 " All of your Plugins must be added before the following line
@@ -61,6 +63,10 @@ let python_highlight_all=1
 autocmd vimenter * NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
+" Color plugin conf
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
 
 
 set number
