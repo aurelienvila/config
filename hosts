@@ -1,1 +1,67 @@
-/etc/hosts
+127.0.0.1	localhost
+127.0.1.1	aurelien-T460
+
+172.16.1.196	srvdev.delair.local
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+# Local stack
+127.0.0.1	minio.service.consul
+127.0.0.1	mongo.service.consul
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+# dev cluster
+35.180.229.141 delair-dev.delair.local
+35.180.229.141 vault.delair-dev.delair.local
+35.180.229.141 local-vault.delair-dev.delair.local
+35.180.229.141 nomad.delair-dev.delair.local
+35.180.229.141 consul.delair-dev.delair.local
+35.180.229.141 dx-task-manager.delair-dev.delair.local
+35.180.229.141 dx-auth.delair-dev.delair.local
+35.180.229.141 kibana.delair-dev.delair.local
+35.180.229.141 elasticsearch.delair-dev.delair.local
+35.180.229.141 rabbitmq.delair-dev.delair.local
+35.180.229.141 dx-balancer.delair-dev.delair.local
+35.180.229.141 mongo_access.delair-dev.delair.local
+
+#Nomads 
+52.47.211.190 delair-staging.delair.local
+52.47.211.190 vault.delair-staging.delair.local
+52.47.211.190 nomad.delair-staging.delair.local
+52.47.211.190 consul.delair-staging.delair.local
+52.47.211.190 dx-task-manager.delair-staging.delair.local
+52.47.211.190 dx-auth.delair-staging.delair.local
+52.47.211.190 kibana.delair-staging.delair.local
+52.47.211.190 elasticsearch.delair-staging.delair.local
+52.47.211.190 rabbitmq.delair-staging.delair.local
+52.47.211.190 dx-balancer.delair-staging.delair.local
+
+# prod cluster
+35.180.121.8 delair-prod.delair.local
+35.180.121.8 vault.delair-prod.delair.local
+35.180.121.8 nomad.delair-prod.delair.local
+35.180.121.8 consul.delair-prod.delair.local
+35.180.121.8 dx-task-manager.delair-prod.delair.local
+35.180.121.8 dx-auth.delair-prod.delair.local
+35.180.121.8 kibana.delair-prod.delair.local
+35.180.121.8 dx-balancer.delair-prod.delair.local
+35.180.121.8 elasticsearch.delair-prod.delair.local
+35.180.121.8 mongo.delair-prod.delair.local
+
+# Local machine
+172.30.0.10 florian
+172.30.0.11 gaston
+
+172.30.0.14 data1
+172.30.0.13 data2
+172.30.0.12 data3
