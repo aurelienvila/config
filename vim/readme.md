@@ -1,13 +1,14 @@
-# Vim configuration
+# Vim configuration
 
 Configurations is inspired from following websites : 
 
 - https://realpython.com/vim-and-python-a-match-made-in-heaven/
 - https://dev.to/allanmacgregor/vim-is-the-perfect-ide-e80
 
-## Step summary
+## Step summary
 
 **Install Vundle**
+
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
 `touch ~/.vimrc`
