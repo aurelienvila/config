@@ -54,7 +54,7 @@ set splitbelow
 set splitright
 
 "flag unnecessary whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "YouCompleteMe conf
 let g:ycm_autoclose_preview_window_after_completion=1
