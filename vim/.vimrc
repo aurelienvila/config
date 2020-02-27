@@ -31,6 +31,10 @@ Plugin 'scrooloose/nerdtree'             "File tree
 Plugin 'jistr/vim-nerdtree-tabs'         "Use tab for file tree
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
+Plugin 'tpope/vim-commentary' "Comment plugin
+" gcc - comment/toggle a line 
+" gc - to comment/toggle target of a move or with visual mode
+" gcgc - to uncomments a set of adjacent commented lines
 
 
 
