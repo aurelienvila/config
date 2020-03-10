@@ -47,6 +47,9 @@ filetype plugin indent on    " required
 " Configuration Section
 """""""""""""""""""""""""""""""""""""
 
+"set keys
+let mapleader = " "
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -61,21 +64,34 @@ set splitright
 au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "YouCompleteMe conf
+"<C-O> to jump back
+"<C-I> to jump forward
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>gd  :YcmCompleter GetDoc<CR>
 
 let python_highlight_all=1
 
 "Conf for file tree
-autocmd vimenter * NERDTree
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+nmap <F2> :NERDTreeToggle<CR>
+
+" to enable flake8
+filetype plugin on
 
 "Color plugin conf
 "set background=light
 "let g:solarized_termcolors=256
 "colorscheme solarized
 colorscheme zenburn
-
 
 set number
 set showcmd
@@ -91,5 +107,11 @@ nnoremap j gj
 nnoremap k gk
 nnoremap B ^
 nnoremap E $
+
+"Highlight column over 100 for python
+
+autocmd FileType python set colorcolumn=101
+highlight ColorColumn ctermbg=darkred guibg=darkred
+
 
 " from https://dougblack.io/words/a-good-vimrc.html
