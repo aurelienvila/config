@@ -26,12 +26,16 @@ Plugin 'vim-scripts/indentpython.vim'    "Auto indentation
 Plugin 'Valloric/YouCompleteMe'          "Auto completion
 Plugin 'vim-syntastic/syntastic'         "Syntax correction
 Plugin 'vim-python/python-syntax'
-Plugin 'nvie/vim-flake8'                 "Pep8 Syntax correction
+"Plugin 'nvie/vim-flake8'                 "Pep8 Syntax correction
 Plugin 'scrooloose/nerdtree'             "File tree
 Plugin 'jistr/vim-nerdtree-tabs'         "Use tab for file tree
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'tpope/vim-commentary' "Comment plugin
+Plugin 'tmhedberg/SimpylFold'
+"Version not merged yet in tmhedberg to fold function definitions 
+"Plugin 'Siddarth-Raghuvanshi/SimpylFold'
+
 " gcc - comment/toggle a line 
 " gc - to comment/toggle target of a move or with visual mode
 " gcgc - to uncomments a set of adjacent commented lines
@@ -113,5 +117,22 @@ nnoremap E $
 autocmd FileType python set colorcolumn=101
 highlight ColorColumn ctermbg=darkred guibg=darkred
 
+"
 
-" from https://dougblack.io/words/a-good-vimrc.html
+"SimpyFold conf
+let g:SimpylFold_docstring_preview=1
+let g:SimpylFold_fold_import=0
+nnoremap <space> za
+
+"Set a breakpoint register
+let @b="        import ipdb; ipdb.set_trace()"
+
+"vim flake8 config
+let g:flake8_show_in_gutter=1
+"autocmd BufWritePost *.py call flake8#Flake8()
+
+"Syntastic config
+let g:syntastic_python_checkers = ['flake8']
+
+
+
