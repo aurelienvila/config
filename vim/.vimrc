@@ -70,7 +70,8 @@ au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 "YouCompleteMe conf
 "<C-O> to jump back
 "<C-I> to jump forward
-let g:ycm_autoclose_preview_window_after_completion=1
+" let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>gd  :YcmCompleter GetDoc<CR>
 
