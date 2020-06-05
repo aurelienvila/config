@@ -93,9 +93,9 @@ nmap <F2> :NERDTreeToggle<CR>
 filetype plugin on
 
 "Color plugin conf
-"set background=light
-"let g:solarized_termcolors=256
-"colorscheme solarized
+set background=light
+let g:solarized_termcolors=256
+" colorscheme solarized
 colorscheme zenburn
 
 set number
@@ -134,6 +134,10 @@ let g:flake8_show_in_gutter=1
 
 "Syntastic config
 let g:syntastic_python_checkers = ['flake8']
+
+"yaml config
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 
 
 
