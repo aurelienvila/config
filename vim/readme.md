@@ -7,6 +7,10 @@ Configurations is inspired from following websites :
 
 ## Step summary
 
+**Delete Vim and rebuild it from source**
+
+https://github.com/ycm-core/YouCompleteMe/wiki/Building-Vim-from-source
+
 **Install Vundle**
 
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
