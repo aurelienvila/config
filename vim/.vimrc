@@ -72,8 +72,31 @@ au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 "<C-I> to jump forward
 " let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_auto_hover = 'CursorHold'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <leader>gd  :YcmCompleter GetDoc<CR>
+nmap <leader>D <plug>(YCMHover)
+
+set balloonexpr=YCMHover()
+set ballooneval
+set balloonevalterm
+
+let g:ycm_register_as_syntastic_checker = 1 "default 1
+let g:Show_diagnostics_ui = 1 "default 1
+
+"will put icons in Vim's gutter on lines that have a diagnostic set.
+"Turning this off will also turn off the YcmErrorLine and YcmWarningLine
+"highlighting
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_always_populate_location_list = 1 "default 0
+let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
+
+
+let g:ycm_complete_in_strings = 1 "default 1
+let g:ycm_collect_identifiers_from_tags_files = 0 "default 0
+""""""""""""
+
 
 let python_highlight_all=1
 
