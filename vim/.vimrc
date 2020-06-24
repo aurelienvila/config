@@ -4,6 +4,46 @@
 " and : https://realpython.com/vim-and-python-a-match-made-in-heaven/
 """""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""""""""""""""""""""""
+" Set ipdb breakpoints script
+"""""""""""""""""""""""""""""""""""""
+func! s:SetBreakpoint()
+    cal append('.', repeat(' ', strlen(matchstr(getline('.'), '^\s*'))) . 'import ipdb; ipdb.set_trace()')
+endf
+
+func! s:RemoveBreakpoint()
+    exe 'silent! g/^\s*import\sipdb\;\?\n*\s*ipdb.set_trace()/d'
+endf
+
+func! s:ToggleBreakpoint()
+    if getline('.')=~#'^\s*import\sipdb' | cal s:RemoveBreakpoint() | el | cal s:SetBreakpoint() | en
+endf
+nnoremap <F6> :call <SID>ToggleBreakpoint()<CR>
+
+"""""""""""""""""""""""""""""""""""""
+" Run current python script in a new terminal
+"""""""""""""""""""""""""""""""""""""
+:command! -nargs=1 Silent execute <q-args> | execute ':redraw!'
+
+func s:GetPythonInterp()
+        let s:ycm_conf_path = execute(':pwd') . "/.ycm_extra_conf.py"
+        echom s:ycm_conf_path
+        if !empty(glob("./.ycm_extra_conf.py"))
+                return split(readfile('./.ycm_extra_conf.py')[2], ":")[-1]
+        endif
+        return "python3"
+endf
+
+func! s:NewTerminal()
+        " :silent !gnome-terminal -- ls & disown & 
+        " let s:run_cmd="ls .; exec zsh"
+        " :Silent gnome-terminal -- zsh -c run_cmd & disown & 
+        let s:interpreter = s:GetPythonInterp()
+        Silent execute ":silent ! gnome-terminal -- zsh -c \"". s:interpreter. " -m ipdb -c continue " . expand('%:p') . "; exec zsh\""
+endf
+
+nnoremap <F7> :call <SID>NewTerminal()<CR>
+
 set nocompatible
 syntax on
 set nowrap
@@ -46,6 +86,7 @@ Plugin 'tmhedberg/SimpylFold'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 
 """""""""""""""""""""""""""""""""""""
 " Configuration Section
