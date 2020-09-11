@@ -73,6 +73,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'tpope/vim-commentary' "Comment plugin
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Version not merged yet in tmhedberg to fold function definitions 
 "Plugin 'Siddarth-Raghuvanshi/SimpylFold'
 
