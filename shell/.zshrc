@@ -98,6 +98,7 @@ alias pycharm='nohup /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh &'
 export PATH="$PATH:$HOME/Data/Dev/vegetation_encroachment/rasterization/cmake-build-debug:/home/aurelien/Data/Dev/scripts"
 #export PATH="/usr/bin"
 export PATH="$PATH:/usr/local/bin"
+export PATH=$PATH:$HOME/bin
 
 disable -r time       # disable shell reserved word
 alias time='time -p ' # -p for POSIX output
