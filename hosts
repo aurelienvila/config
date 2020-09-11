@@ -2,6 +2,7 @@
 127.0.1.1	aurelien-T460
 
 172.16.1.196	srvdev.delair.local
+172.16.1.196	delair-stack.pages.delair.local
 
 # The following lines are desirable for IPv6 capable hosts
 ::1     ip6-localhost ip6-loopback
@@ -60,8 +61,8 @@ ff02::2 ip6-allrouters
 
 # Local machine
 172.30.0.10 florian
-172.30.0.11 gaston
+172.31.1.150 gaston
 
-172.30.0.14 data1
+172.31.1.151 data1
 172.30.0.13 data2
 172.30.0.12 data3
