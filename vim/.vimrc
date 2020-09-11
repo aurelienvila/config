@@ -204,6 +204,7 @@ let g:syntastic_python_checkers = ['flake8']
 "yaml config
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-
-
+" to fix strange character apperance
+let &t_TI = ""
+let &t_TE = ""
 
