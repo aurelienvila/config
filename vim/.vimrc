@@ -110,6 +110,10 @@ set splitright
 "flag unnecessary whitespace
 au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+"vimgrep mapping
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
+
 "YouCompleteMe conf
 "<C-O> to jump back
 "<C-I> to jump forward

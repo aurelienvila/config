@@ -59,6 +59,15 @@ ff02::2 ip6-allrouters
 35.180.121.8 elasticsearch.delair-prod.delair.local
 35.180.121.8 mongo.delair-prod.delair.local
 
+# Local cluster
+127.0.0.1 data-manager.delair.service.consul
+127.0.0.1 delair.service.consul
+127.0.0.1 minio.service.consul
+127.0.0.1 mongo.service.consul
+127.0.0.1 www.delair.service.consul
+127.0.0.1 wldemo.delair.service.consul
+127.0.0.1 rdoai.delair.service.consul
+
 # Local machine
 172.30.0.10 florian
 172.31.1.150 gaston

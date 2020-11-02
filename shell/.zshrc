@@ -108,6 +108,9 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/home/aurelien/.local/bin/virtualenv
 
 source /home/aurelien/.local/bin/virtualenvwrapper.sh
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
-alias run-docker-dev="run-docker-dev.sh"
+
+function run-docker(){
+    docker run -ti -v `pwd`:/data $* bash
+}
 
 bindkey -v
