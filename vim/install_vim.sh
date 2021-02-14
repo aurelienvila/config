@@ -31,7 +31,7 @@ sudo make install -j8 &&
 sudo update-alternatives --install /usr/bin/editor editor /usr/local/bin/vim 1 &&
 sudo update-alternatives --set editor /usr/local/bin/vim &&
 
-rm $HOME/.vimrc &&
+rm $HOME/.vimrc
 ln -s $VIMRC $HOME &&
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
