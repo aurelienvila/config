@@ -7,5 +7,5 @@ sudo apt install curl zsh fonts-powerline -y &&
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &&
 
-rm $HOME/.zshrc &&
+rm $HOME/.zshrc
 ln -s $ZSHRC $HOME 

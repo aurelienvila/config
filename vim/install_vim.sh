@@ -38,7 +38,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
 
 python3 -m pip install ropevim &&
 
-vim -E +PluginInstall +qall &&
+vim -E +PluginInstall +qall
 
 cd $HOME/.vim/bundle/YouCompleteMe &&
 
