@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/aurelien/.oh-my-zsh"
+export ZSH="/home/aurelien/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -94,19 +94,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lsh='ls -lh'
-alias pycharm='nohup /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh &'
-export PATH="$PATH:$HOME/Data/Dev/vegetation_encroachment/rasterization/cmake-build-debug:/home/aurelien/Data/Dev/scripts"
-#export PATH="/usr/bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH=$PATH:$HOME/bin
 
 disable -r time       # disable shell reserved word
 alias time='time -p ' # -p for POSIX output
-export WORKON_HOME=~/Envs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/home/aurelien/.local/bin/virtualenv
 
-source /home/aurelien/.local/bin/virtualenvwrapper.sh
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 function run-docker(){
