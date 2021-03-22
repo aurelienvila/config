@@ -106,4 +106,18 @@ function run-docker(){
     docker run -ti -v `pwd`:/data $* bash
 }
 
+
+SRC_DIR=$HOME/src
+
+_workon(){
+        COMPREPLY=($(ls $HOME/src))
+}
+
+complete -F _workon workon
+
+function workon(){
+        echo "Activate python venv: "$1
+        source $SRC_DIR/$1/.env/bin/activate
+}
+
 bindkey -v
