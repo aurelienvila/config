@@ -121,4 +121,26 @@ function workon(){
         source $SRC_DIR/$1/.env/bin/activate
 }
 
+function initpython(){
+        project_name=${PWD##*/}
+        echo "Create python project "$project_name
+        if [ -d .env ]
+        then
+            echo "Python venv already exists in the directory"
+        else
+            echo "--> Create python venv"
+            python3 -m venv .env --prompt $project_name
+        fi
+        if [ -f .ycm_extra_conf.py ]
+        then
+            echo "Ycm config file already exists"
+        else
+            echo "--> Write ycm config file for vim IDE"
+            echo "def Settings( **kwargs ):
+  return {
+    'interpreter_path': './.env/bin/python'
+  }" > .ycm_extra_conf.py
+        fi
+}
+
 bindkey -v
