@@ -96,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 alias lsh='ls -lh'
 export PATH="$PATH:/usr/local/bin"
 export PATH=$PATH:$HOME/bin
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
 
 disable -r time       # disable shell reserved word
 alias time='time -p ' # -p for POSIX output
