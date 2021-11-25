@@ -118,18 +118,18 @@ complete -F _workon workon
 
 function workon(){
         echo "Activate python venv: "$1
-        source $SRC_DIR/$1/.env/bin/activate
+        source $SRC_DIR/$1/.venv/bin/activate
 }
 
 function initpython(){
         project_name=${PWD##*/}
         echo "Create python project "$project_name
-        if [ -d .env ]
+        if [ -d .venv ]
         then
             echo "Python venv already exists in the directory"
         else
             echo "--> Create python venv"
-            python3 -m venv .env --prompt $project_name
+            python3 -m venv .venv --prompt $project_name
         fi
         if [ -f .ycm_extra_conf.py ]
         then
@@ -138,7 +138,7 @@ function initpython(){
             echo "--> Write ycm config file for vim IDE"
             echo "def Settings( **kwargs ):
   return {
-    'interpreter_path': './.env/bin/python'
+    'interpreter_path': './.venv/bin/python'
   }" > .ycm_extra_conf.py
         fi
 }
