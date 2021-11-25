@@ -136,13 +136,13 @@ set balloonexpr=YCMHover()
 set ballooneval
 set balloonevalterm
 
-let g:ycm_register_as_syntastic_checker = 1 "default 1
-let g:Show_diagnostics_ui = 1 "default 1
+let g:ycm_register_as_syntastic_checker = 0 "default 1
+let g:Show_diagnostics_ui = 0 "default 1
 
 "will put icons in Vim's gutter on lines that have a diagnostic set.
 "Turning this off will also turn off the YcmErrorLine and YcmWarningLine
 "highlighting
-let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_always_populate_location_list = 1 "default 0
 let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
@@ -168,7 +168,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 nmap <F2> :NERDTreeToggle<CR>
 
 " to enable flake8
-filetype plugin on
+"filetype plugin on
 
 "Color plugin conf
 set background=light
@@ -192,7 +192,6 @@ nnoremap B ^
 nnoremap E $
 
 "Highlight column over 100 for python
-
 autocmd FileType python set colorcolumn=101
 highlight ColorColumn ctermbg=darkred guibg=darkred
 
@@ -207,11 +206,13 @@ nnoremap <space> za
 let @b="        import ipdb; ipdb.set_trace()"
 
 "vim flake8 config
-let g:flake8_show_in_gutter=1
+"let g:flake8_show_in_gutter=1
 "autocmd BufWritePost *.py call flake8#Flake8()
 
 "Syntastic config
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = "--config /home/aurelien/.config/flake8"
+
 
 "yaml config
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
