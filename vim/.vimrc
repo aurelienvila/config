@@ -76,6 +76,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'python-rope/ropevim'
+Plugin 'tpope/vim-unimpaired'
 "Version not merged yet in tmhedberg to fold function definitions 
 "Plugin 'Siddarth-Raghuvanshi/SimpylFold'
 
