@@ -124,15 +124,6 @@ au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 "vimgrep mapping
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
-
-"Nerdtree config 
-" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-
-let NERDTreeMapActivateNode='<space>'
-
-
 "YouCompleteMe conf
 "<C-O> to jump back
 "<C-I> to jump forward
@@ -175,7 +166,16 @@ endfunction
 
 autocmd VimEnter * call StartUp()
 
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+"Nerdtree config 
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+
+let NERDTreeMapActivateNode='<space>'
+
+
+let NERDTreeIgnore=['\.pyc$', '\~$', "__pycache__"] "ignore files in NERDTree
 nmap <F2> :NERDTreeToggle<CR>
 
 " to enable flake8
