@@ -105,6 +105,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" vim unpaired changes
+nmap ç [
+nmap à ]
+omap ç [
+omap à ]
+xmap ç [
+xmap à ]
+
 "split preferences
 set splitbelow
 set splitright
@@ -121,6 +130,7 @@ map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
+let NERDTreeMapActivateNode='<space>'
 
 
 "YouCompleteMe conf
