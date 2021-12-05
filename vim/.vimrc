@@ -97,7 +97,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""
 
 "set keys
-let mapleader = " "
+let mapleader = "²"
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
